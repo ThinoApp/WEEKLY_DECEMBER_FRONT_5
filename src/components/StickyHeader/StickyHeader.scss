@@ -6,7 +6,7 @@
         @apply fixed opacity-100;
     }
     &.hide {
-        @apply opacity-0;
+        @apply fixed opacity-0;
     }
     ul {
         @apply flex items-center gap-4;
