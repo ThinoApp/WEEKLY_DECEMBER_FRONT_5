@@ -29,7 +29,7 @@ const GithubCopilot = () => {
                         transition={{ delay: 0.2, duration: 0.5 }}
                         className="line-shape-2 origin-top"
                     ></motion.div>
-                    <div className="line-shape-3">
+                    <div className="line-shape-3 hidden lg:flex">
                         <img
                             src={`${config.image_base}/assets/images/git-branch-productivity.svg`}
                             alt="git branch"

@@ -1,7 +1,7 @@
 @use '/src/assets/global';
 .GithubFeatures {
     @include global.paddingInline();
-    @apply w-full lg:max-w-screen-2xl  grid lg:px-8 gap-8 overflow-visible relative;
+    @apply w-full lg:max-w-screen-2xl flex flex-col lg:grid lg:px-8 gap-8 overflow-visible relative;
     grid-template-areas:
         'top top'
         'left right';
@@ -35,6 +35,7 @@
         }
     }
     .box-1 {
+        @apply flex-col lg:flex-row;
         grid-area: top;
     }
     .box-2 {

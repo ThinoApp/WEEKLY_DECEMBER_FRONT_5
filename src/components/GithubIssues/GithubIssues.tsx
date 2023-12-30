@@ -24,7 +24,7 @@ const GithubIssues = () => {
                         viewport={{ amount: 0.2 }}
                         className="line-shape-2 origin-top"
                     ></motion.div>
-                    <div className="line-shape-3">
+                    <div className="line-shape-3 hidden lg:flex">
                         <img
                             src={`${config.image_base}/assets/images/git-branch-collaboration.svg`}
                             alt="git branch"

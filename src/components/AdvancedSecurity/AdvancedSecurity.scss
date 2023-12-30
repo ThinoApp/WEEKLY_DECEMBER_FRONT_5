@@ -4,15 +4,15 @@
     @include global.paddingInline();
     @apply z-10 flex flex-col overflow-hidden py-8;
     .AdvancedSecurity-illustration {
-        @apply relative px-4;
+        @apply relative lg:px-4;
         .Main-card {
-            @apply relative border-[1px] border-gray-700 z-10 flex rounded-lg pl-14 min-w-full max-w-full  h-[67vh] bg-[#161b22];
-            @apply flex flex-row items-center justify-center;
+            @apply relative border-[1px] border-gray-700 z-10 flex rounded-lg px-2 lg:pl-14 min-w-full max-w-full  h-[67vh] bg-[#161b22];
+            @apply flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-0;
             & > .card-item {
                 @apply rounded-md;
             }
             .card-item {
-                @apply flex gap-2 justify-start items-center w-[30vw] px-8 py-5 bg-[#40474e];
+                @apply flex gap-2 justify-start items-center w-full lg:w-[30vw] px-8 py-5 bg-[#40474e];
 
                 .icon {
                     @apply text-[#3fb950] text-2xl;
@@ -29,7 +29,7 @@
             }
 
             .divider {
-                @apply w-12 h-[2px] bg-white flex items-start justify-between;
+                @apply hidden lg:flex w-12 h-[2px] bg-white items-start justify-between;
                 .circle {
                     @apply w-3 -translate-y-1/3 h-3 rounded-full bg-gray-700 border-[1px] border-gray-900;
                     &:nth-of-type(1) {

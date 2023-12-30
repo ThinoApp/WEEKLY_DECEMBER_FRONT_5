@@ -11,7 +11,7 @@
     }
 
     .Footer-content {
-        @apply flex flex-row flex-wrap w-full;
+        @apply flex flex-row flex-wrap w-full gap-8 lg:gap-0;
         & > div {
             @apply w-1/3 flex flex-col  items-start gap-2;
             h3 {
@@ -28,7 +28,7 @@
             }
         }
         & > ul {
-            @apply flex-1 pl-4 flex flex-col gap-3;
+            @apply w-full lg:w-auto lg:flex-1 pl-4 flex flex-col gap-3 border-b-[1px] lg:border-b-[0px];
             li {
                 @apply font-sans text-[13px] text-gray-400 leading-[24px];
             }
