@@ -3,6 +3,7 @@ import { GoHeart } from 'react-icons/go';
 import './GithubDiscussion.scss';
 import config from '@/utils/config';
 import CustomCard from '../CustomCard/CustomCard';
+import { motion } from 'framer-motion';
 const GithubDiscussion = () => {
     return (
         <div className="GithubDiscussion">
@@ -20,14 +21,20 @@ const GithubDiscussion = () => {
                 <div className="sponsor-list">
                     {[1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10].map((item) => {
                         return (
-                            <div className="sponsor-item" key={item}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.05 * item }}
+                                className="sponsor-item"
+                                key={item}
+                            >
                                 <img src={`${config.image_base}/assets/images/kazupon.jpeg`} alt="sponsor profile" />
                                 <p>kazuya kawaguchi</p>
                                 <button>
                                     <GoHeart />
                                     Sponsor
                                 </button>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>

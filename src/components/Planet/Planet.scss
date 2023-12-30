@@ -1,12 +1,12 @@
 .Planet {
-    @apply w-screen  z-50 bg-[#070d1f] flex items-center justify-center relative;
+    @apply w-screen h-[88vh] overflow-hidden z-50 bg-[#070d1f] flex items-center justify-center relative;
     &::after {
         content: '';
         @apply block absolute top-0 left-0 w-screen h-full;
         background: linear-gradient(to bottom, transparent 65%, rgba(#0d1117, 1));
     }
     video {
-        @apply w-2/3 h-2/3 object-cover;
+        @apply w-[65%] h-full object-cover overflow-hidden;
     }
     img {
         @apply absolute w-20 h-20 object-cover;

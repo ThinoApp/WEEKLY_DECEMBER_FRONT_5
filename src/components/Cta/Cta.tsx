@@ -2,13 +2,20 @@ import { GoCode } from 'react-icons/go';
 
 import './Cta.scss';
 import { FiChevronRight } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const Cta = () => {
     return (
         <div className="Cta">
             <div className="Cta-main">
                 <div className="Cta-shape">
-                    <div className="line-shape-1"></div>
+                    <motion.div
+                        initial={{ opacity: 0, scaleY: 0 }}
+                        whileInView={{ opacity: 1, scaleY: 1 }}
+                        transition={{ duration: 0.5 }}
+                        viewport={{ amount: 0.9 }}
+                        className="line-shape-1 origin-top"
+                    ></motion.div>
                     <div className="go-code-container">
                         <GoCode color="#fff" className="code-icon" />
                     </div>

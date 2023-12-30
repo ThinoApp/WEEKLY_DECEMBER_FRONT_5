@@ -11,7 +11,7 @@
             @apply flex flex-col items-center;
             .line-shape-1 {
                 @apply w-[3px] h-[420px] lg:h-[22rem];
-                background: linear-gradient(transparent, #7c72ff 30%);
+                background: linear-gradient(transparent, rgb(102, 57, 186) 10%, rgb(163, 113, 247), rgb(210, 168, 255));
             }
             .line-shape-2 {
                 @apply w-[3px] h-[420px] lg:h-64;
@@ -22,7 +22,7 @@
                 @apply w-7 h-7 my-4 flex items-center justify-center relative;
                 &::before {
                     content: '';
-                    @apply absolute top-0 left-0 w-full h-full bg-[#7c72ff];
+                    @apply absolute top-0 left-0 w-full h-full bg-[#f778ba];
                     filter: blur(18px);
                 }
 
