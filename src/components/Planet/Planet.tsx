@@ -1,9 +1,20 @@
 import config from '@/utils/config';
 import './Planet.scss';
+import { useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 const Planet = () => {
+    const ref = useRef<HTMLVideoElement>(null);
+    const isInView = useInView(ref);
+    useEffect(() => {
+        if (isInView) {
+            ref.current?.play();
+        } else {
+            ref.current?.pause();
+        }
+    }, [isInView]);
     return (
         <div className="Planet">
-            <video autoPlay loop muted>
+            <video loop muted ref={ref}>
                 <source src={`${config.image_base}/assets/images/globe.mp4`} type="video/mp4" />
             </video>
             <img src={`${config.image_base}/assets/images/footer-blur.png`} alt="footer-icon" />
