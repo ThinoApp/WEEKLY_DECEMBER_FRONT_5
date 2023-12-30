@@ -83,7 +83,13 @@ const AdvancedSecurity = () => {
             </div>
             <div className="AdvancedSecurity-content">
                 <div className="AdvancedSecurity-shape">
-                    <div className="line-shape-2"></div>
+                    <motion.div
+                        initial={{ opacity: 0, scaleY: 0 }}
+                        whileInView={{ opacity: 1, scaleY: 1 }}
+                        transition={{ delay: 0.5, dutaion: 0.5 }}
+                        viewport={{ amount: 0.2 }}
+                        className="line-shape-2 origin-top"
+                    ></motion.div>
                     <div className="line-shape-3">
                         <img
                             src={`${config.image_base}/assets/images/git-branch-security.svg`}
@@ -93,20 +99,29 @@ const AdvancedSecurity = () => {
                     </div>
                 </div>
                 <div className="flex flex-col gap-4 relative">
-                    <p className="AdvancedSecurity-description">
+                    <motion.p
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        className="AdvancedSecurity-description"
+                    >
                         <span>GitHub Advanced Security </span>
                         enables you to find and fix vulnerabilities with ease and ship secure code quickly.
-                    </p>
-                    <a href="#">
+                    </motion.p>
+                    <motion.a initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} href="#">
                         Dive into GitHub Advanced Security
                         <FiChevronRight />
-                    </a>
-                    <div className="Increase">
+                    </motion.a>
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="Increase"
+                    >
                         <p>Did you know ?</p>
                         <h2>7x faster</h2>
                         <p>vulnerability fixes with GitHub1</p>
                         {/* <img src={`${config.image_base}/assets/images/shape-copilot.svg`} /> */}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
