@@ -3,7 +3,7 @@ import './Planet.scss';
 const Planet = () => {
     return (
         <div className="Planet">
-            <video autoPlay loop>
+            <video autoPlay loop muted>
                 <source src={`${config.image_base}/assets/images/globe.mp4`} type="video/mp4" />
             </video>
             <img src={`${config.image_base}/assets/images/footer-blur.png`} alt="footer-icon" />
