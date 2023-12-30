@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Mona-Sans';
+    src:
+        url('Mona-Sans-Regular.woff2') format('woff2'),
+        url('Mona-Sans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src:
+        url('Mona-Sans-Regular.woff2') format('woff2'),
+        url('Mona-Sans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans-Medium';
+    src:
+        url('Mona-Sans-Medium.woff2') format('woff2'),
+        url('Mona-Sans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans-Medium';
+    src:
+        url('Mona-Sans-Medium.woff2') format('woff2'),
+        url('Mona-Sans-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans-Bold';
+    src:
+        url('Mona-Sans-Bold.woff') format('woff2'),
+        url('Mona-Sans-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

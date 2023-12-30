@@ -1,0 +1,36 @@
+.StickyHeader {
+    @apply top-0 left-0 w-screen h-20  bg-[#0d1117] px-4 z-50;
+    @apply flex flex-row items-center duration-300;
+    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.2);
+    &.show {
+        @apply fixed opacity-100;
+    }
+    &.hide {
+        @apply opacity-0;
+    }
+    ul {
+        @apply flex items-center gap-4;
+        li {
+            @apply text-white font-sans-md text-lg duration-300 cursor-pointer;
+            background-image: linear-gradient(to bottom, #fff, #fff);
+            background-repeat: no-repeat;
+            background-size: 0% 2%;
+            background-position: center bottom;
+            &:hover {
+                background-size: 100% 5%;
+            }
+        }
+    }
+    .btn-container {
+        @apply ml-auto flex items-center gap-4;
+        button {
+            @apply flex items-center px-8 py-2 gap-4;
+            &:nth-of-type(1) {
+                @apply font-sans-b text-white text-lg border-[1px] border-gray-400 rounded-md;
+            }
+            &:nth-of-type(2) {
+                @apply font-sans-b text-[#0d1117] bg-white text-lg rounded-md;
+            }
+        }
+    }
+}

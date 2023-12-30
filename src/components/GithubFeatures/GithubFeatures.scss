@@ -1,0 +1,66 @@
+@use '/src/assets/global';
+.GithubFeatures {
+    @include global.paddingInline();
+    @apply w-full lg:max-w-screen-2xl  grid lg:px-8 gap-8 overflow-visible relative;
+    grid-template-areas:
+        'top top'
+        'left right';
+
+    .box {
+        @apply border-[1px] border-gray-700 z-10 flex rounded-lg pl-14 min-w-full max-w-full  h-[67vh] bg-[#161b22] relative;
+        .box-content {
+            @apply h-full flex flex-col justify-around;
+            p {
+                @apply text-[#848d97] text-[1.4rem] min-w-[65%] max-w-[65%] font-sans-md;
+                span {
+                    @apply text-white;
+                }
+            }
+
+            a {
+                @apply text-white py-2 text-xl w-fit font-sans-b flex flex-row gap-3 items-center;
+                background-image: linear-gradient(to left, white, white);
+                background-size: 0% 7%;
+                background-position: bottom left;
+                background-repeat: no-repeat;
+                transition: 0.5s;
+                &:hover {
+                    background-size: 90% 7%;
+                }
+            }
+        }
+
+        img {
+            @apply w-[100%]  object-cover;
+        }
+    }
+    .box-1 {
+        grid-area: top;
+    }
+    .box-2 {
+        @apply flex-col min-h-screen max-h-screen;
+        grid-area: left;
+        .box-content {
+            @apply pt-14 justify-start gap-4;
+            p {
+                @apply w-3/4;
+            }
+        }
+        img {
+            @apply w-[100%]  object-cover;
+        }
+    }
+    .box-3 {
+        @apply flex-col min-h-screen max-h-screen;
+        grid-area: right;
+        .box-content {
+            @apply pt-14 justify-start gap-4;
+            p {
+                @apply w-3/4;
+            }
+        }
+        img {
+            @apply w-[100%]  object-cover;
+        }
+    }
+}

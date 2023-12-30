@@ -1,0 +1,7 @@
+.App {
+    @apply min-w-[100vw] overflow-x-hidden  bg-dark flex flex-col;
+}
+
+.App > * {
+    @apply overflow-x-hidden;
+}

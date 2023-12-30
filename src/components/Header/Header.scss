@@ -1,0 +1,151 @@
+.Header {
+    @apply w-full flex flex-row items-center justify-between py-4;
+
+    .github-icon {
+        @apply order-2 text-4xl text-white lg:order-1;
+    }
+
+    .MenuDesktop {
+        @apply hidden lg:flex gap-4 order-2 mr-auto ml-5;
+
+        li {
+            @apply relative text-white flex items-center gap-2 duration-300 cursor-pointer;
+
+            .content {
+                @apply w-[40vw] absolute top-8 bg-white px-8 py-7 rounded-lg flex flex-row duration-300;
+                &.solution {
+                    @apply w-[25vw] flex-col gap-4;
+                    .product-content-left {
+                        @apply gap-4;
+                    }
+                }
+                &.show {
+                    @apply translate-y-0 opacity-100;
+                    pointer-events: all;
+                }
+                &.hide {
+                    @apply -translate-y-4 opacity-0;
+                    pointer-events: none;
+                }
+                .product-content-left {
+                    @apply flex flex-col items-start gap-5;
+                    flex: 1;
+                    .github-menu-icon {
+                        @apply text-gray-500 text-2xl;
+                    }
+                    li {
+                        @apply flex items-center gap-4;
+                        &:hover {
+                            h4,
+                            p,
+                            .github-menu-icon {
+                                color: rgb(9, 105, 218);
+                            }
+                        }
+                    }
+                    h4 {
+                        @apply text-black;
+                        font-family: Inter;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                    p {
+                        @apply text-gray-500;
+                        font-size: 14px;
+                    }
+                }
+
+                .product-content-right {
+                    @apply pl-8 flex-1 flex flex-col items-start gap-4;
+                    border-left: 1px solid rgba($color: #000000, $alpha: 0.2);
+                    li {
+                        font-family: Inter;
+                        @apply text-gray-500;
+                        font-size: 14px;
+                        &:hover {
+                            span {
+                                @apply opacity-100 scale-x-100;
+                            }
+                        }
+                        span {
+                            @apply duration-300 origin-left scale-x-0;
+                            opacity: 0;
+                        }
+                        &:hover {
+                            color: rgb(9, 105, 218);
+                        }
+                        &:nth-child(1) {
+                            @apply text-black;
+                            font-weight: 600;
+                            &:hover {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                color: #888888;
+            }
+        }
+    }
+
+    .MenuMobile {
+        @apply order-3  flex lg:hidden;
+        button {
+            @apply text-3xl text-white;
+        }
+        ul {
+            @apply w-[90vw] h-[90vh]  bg-white fixed bottom-0 right-0 flex flex-col gap-8 px-5 py-6 rounded-tl-md duration-300;
+            &.hide {
+                @apply translate-x-full opacity-0;
+            }
+            &.show {
+                @apply translate-x-0 opacity-100;
+            }
+            li {
+                @apply text-[#1b1f23] font-sans;
+                /* Font & Text */
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: left;
+                &:hover {
+                    color: #888888;
+                }
+            }
+        }
+    }
+
+    .Header-cta {
+        @apply order-1 lg:order-3 flex items-center;
+        .search-container {
+            @apply hidden lg:flex items-center justify-between gap-2 bg-[#283041] w-[25vw]  rounded-md border-[1px] border-[#565e69] p-1;
+            .search-icon {
+                @apply text-[#565e69];
+            }
+            input {
+                @apply text-[14px] bg-transparent flex-1 outline-none text-white;
+                &::placeholder {
+                    @apply text-white;
+                }
+            }
+
+            .search-slash {
+                @apply border-[1px] border-[#565e69] p-[3px] text-[10px] text-[#565e69] rounded-sm;
+            }
+        }
+
+        .btn-sign-up {
+            @apply hidden lg:block;
+            @apply lg:text-white lg:border-[1px] lg:px-2 lg:py-1 lg:rounded-lg;
+        }
+
+        .btn-sign-in {
+            @apply text-white border-[1px] px-4 py-2 rounded-lg;
+            @apply lg:border-none;
+        }
+    }
+}

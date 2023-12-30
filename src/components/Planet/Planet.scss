@@ -1,0 +1,56 @@
+.Planet {
+    @apply w-screen  z-50 bg-[#070d1f] flex items-center justify-center relative;
+    &::after {
+        content: '';
+        @apply block absolute top-0 left-0 w-screen h-full;
+        background: linear-gradient(to bottom, transparent 65%, rgba(#0d1117, 1));
+    }
+    video {
+        @apply w-2/3 h-2/3 object-cover;
+    }
+    img {
+        @apply absolute w-20 h-20 object-cover;
+        &:nth-of-type(1) {
+            @apply left-1/4 bottom-0;
+        }
+        &:nth-of-type(2) {
+            @apply w-36 h-36 left-[15%] top-1/3;
+            animation: rotateMiddle 10s infinite;
+            animation-direction: alternate-reverse;
+        }
+        &:nth-of-type(3) {
+            @apply w-12 h-12 right-[25%] top-1/4;
+            animation: rotate 40s infinite;
+        }
+        &:nth-of-type(4) {
+            @apply w-52 h-52 right-[20%] bottom-1/4;
+            animation: rotateMiddle 10s infinite;
+            animation-direction: alternate-reverse;
+        }
+        &:nth-of-type(5) {
+            @apply w-24 h-24 right-[15%] top-1/3;
+        }
+        &:nth-of-type(6) {
+            @apply w-16 h-16 left-[10%] top-1/2;
+            animation: rotate 40s infinite;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateMiddle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+}
