@@ -6,10 +6,10 @@
         background: linear-gradient(to bottom, transparent 65%, rgba(#0d1117, 1));
     }
     video {
-        @apply w-[65%] h-full object-cover overflow-hidden;
+        @apply w-full sm:w-[65%] h-full object-cover overflow-hidden;
     }
     img {
-        @apply absolute w-20 h-20 object-cover;
+        @apply hidden sm:block absolute w-20 h-20 object-cover;
         &:nth-of-type(1) {
             @apply left-1/4 bottom-0;
         }

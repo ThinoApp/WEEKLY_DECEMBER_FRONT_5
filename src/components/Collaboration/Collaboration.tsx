@@ -1,10 +1,22 @@
 import { GoCodeOfConduct } from 'react-icons/go';
 import './Collaboration.scss';
 import config from '@/utils/config';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import useMenuStore from '@/store/menuStore';
 const Collaboration = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+    const { setActiveMenu } = useMenuStore();
+    useEffect(() => {
+        setActiveMenu({
+            id: 2,
+            value: 'Collaboration',
+        });
+        console.log('IS IN VIEW SECURITY');
+    }, [isInView]);
     return (
-        <div className="Collaboration">
+        <div className="Collaboration" id="Collaboration" ref={ref}>
             <div className="Collaboration-shape">
                 <motion.div
                     initial={{ opacity: 0, scaleY: 0 }}

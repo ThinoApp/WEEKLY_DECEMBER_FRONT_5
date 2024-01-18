@@ -7,11 +7,11 @@
         'left right';
 
     .box {
-        @apply border-[1px] border-gray-700 z-10 flex rounded-lg pl-14 min-w-full max-w-full  h-[67vh] max-h-[67vh] bg-[#161b22] relative;
+        @apply border-[1px] border-gray-700 z-10 flex rounded-lg gap-8 sm:gap-0 sm:pl-14 min-w-full max-w-full h-fit sm:min-h-[67vh] sm:max-h-[67vh] bg-[#161b22] relative;
         .box-content {
             @apply h-full flex flex-col justify-around;
             p {
-                @apply text-[#848d97] text-[1.4rem] min-w-[65%] max-w-[65%] font-sans-md;
+                @apply text-[#848d97] text-[1.4rem] w-full sm:w-[65%] sm:min-w-[65%] sm:max-w-[65%] font-sans-md;
                 span {
                     @apply text-white;
                 }
@@ -31,18 +31,27 @@
         }
 
         img {
-            @apply w-[80%] object-cover;
+            @apply w-full sm:w-[100%] object-cover;
         }
     }
     .box-1 {
-        @apply flex-col lg:flex-row;
+        @apply flex-col lg:flex-row sm:pr-4;
         grid-area: top;
+        .box-content {
+            @apply pt-14 justify-start gap-4;
+            @apply px-8 sm:px-0;
+        }
+        img {
+            @apply w-full sm:w-[50%];
+        }
     }
     .box-2 {
-        @apply flex-col min-h-screen max-h-screen overflow-hidden;
+        @apply flex-col h-fit sm:min-h-screen sm:max-h-screen overflow-hidden;
         grid-area: left;
         .box-content {
             @apply pt-14 justify-start gap-4;
+            @apply px-8 sm:px-0;
+
             p {
                 @apply w-3/4;
             }
@@ -52,10 +61,12 @@
         }
     }
     .box-3 {
-        @apply flex-col min-h-screen max-h-screen;
+        @apply flex-col h-fit sm:min-h-screen sm:max-h-screen;
         grid-area: right;
         .box-content {
             @apply pt-14 justify-start gap-4;
+            @apply px-8 sm:px-0;
+
             p {
                 @apply w-3/4;
             }

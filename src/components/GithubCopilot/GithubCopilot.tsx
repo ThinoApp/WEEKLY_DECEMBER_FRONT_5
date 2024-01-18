@@ -14,8 +14,8 @@ const GithubCopilot = () => {
                     src={`${config.image_base}/assets/images/illu-copilot-editor.png`}
                 />
                 <motion.img
-                    initial={{ opacity: 0, x: 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    // initial={{ opacity: 0, x: 50 }}
+                    // whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
                     src={`${config.image_base}/assets/images/illu-copilot-sidebar.png`}
                 />

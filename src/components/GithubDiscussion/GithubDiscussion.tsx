@@ -18,25 +18,30 @@ const GithubDiscussion = () => {
                         <FiChevronRight />
                     </a>
                 </div>
-                <div className="sponsor-list">
-                    {[1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10].map((item) => {
-                        return (
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.05 * item }}
-                                className="sponsor-item"
-                                key={item}
-                            >
-                                <img src={`${config.image_base}/assets/images/kazupon.jpeg`} alt="sponsor profile" />
-                                <p>kazuya kawaguchi</p>
-                                <button>
-                                    <GoHeart />
-                                    Sponsor
-                                </button>
-                            </motion.div>
-                        );
-                    })}
+                <div className="overflow-hidden h-fit">
+                    <div className="sponsor-list">
+                        {[1, 2, 3, 4, 5, 5, 6, 7, 8, 9, 10].map((item) => {
+                            return (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.05 * item }}
+                                    className="sponsor-item"
+                                    key={item}
+                                >
+                                    <img
+                                        src={`${config.image_base}/assets/images/kazupon.jpeg`}
+                                        alt="sponsor profile"
+                                    />
+                                    <p>kazuya kawaguchi</p>
+                                    <button>
+                                        <GoHeart />
+                                        Sponsor
+                                    </button>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
                 </div>
             </CustomCard>
 
@@ -51,7 +56,7 @@ const GithubDiscussion = () => {
                         <FiChevronRight />
                     </a>
                 </div>
-                <img src={`${config.image_base}/assets/images/illu-discussions.png`} />
+                <img src={`${config.image_base}/assets/images/illu-pull-requests.png`} />
             </CustomCard>
             <CustomCard colorGloss="#f778ba" className="box box-3">
                 <div className="box-content">
@@ -64,7 +69,7 @@ const GithubDiscussion = () => {
                         <FiChevronRight />
                     </a>
                 </div>
-                <img src={`${config.image_base}/assets/images/illu-pull-requests.png`} />
+                <img src={`${config.image_base}/assets/images/illu-discussions.png`} />
             </CustomCard>
         </div>
     );

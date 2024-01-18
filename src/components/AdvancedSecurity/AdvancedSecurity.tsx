@@ -20,16 +20,17 @@ const AdvancedSecurity = () => {
                         <p>1m21s</p>
                     </motion.div>
                     <motion.div
-                        initial={{ opacity: 0.5, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{
-                            delay: 0.3,
-                        }}
+                        // initial={{ opacity: 0.5, scale: 0 }}
+                        // whileInView={{ opacity: 1, scale: 1 }}
+                        // transition={{
+                        //     delay: 0.3,
+                        // }}
                         className="divider"
                     >
                         <div className="circle" />
                         <div className="circle" />
                     </motion.div>
+
                     <motion.div
                         initial={{ opacity: 0.3, scale: 0.5 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -87,7 +88,7 @@ const AdvancedSecurity = () => {
                         initial={{ opacity: 0, scaleY: 0 }}
                         whileInView={{ opacity: 1, scaleY: 1 }}
                         transition={{ delay: 0.5, dutaion: 0.5 }}
-                        viewport={{ amount: 0.2 }}
+                        // viewport={{ amount: 0 }}
                         className="line-shape-2 origin-top"
                     ></motion.div>
                     <div className="line-shape-3 hidden lg:flex">
@@ -98,7 +99,7 @@ const AdvancedSecurity = () => {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col gap-4 relative">
+                <div className="flex flex-col gap-4 relative pt-20">
                     <motion.p
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}

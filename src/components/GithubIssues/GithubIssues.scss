@@ -11,21 +11,21 @@
                 @apply border-[1px] border-gray-700;
             }
             &:nth-of-type(2) {
-                @apply absolute right-2  top-[75%] w-[40%];
+                @apply absolute -right-10 sm:right-2  top-[50%] sm:top-[75%] w-[90%] sm:w-[40%];
             }
         }
         .glossing-blur {
-            @apply -z-10 absolute w-[25rem] h-[25rem] rounded-full bg-[#f778ba]  right-32  -bottom-1/3;
+            @apply hidden sm:block -z-10 absolute w-[25rem] h-[25rem] rounded-full bg-[#f778ba]  right-32  -bottom-1/3;
             filter: blur(142px);
         }
     }
     .GithubIssues-content {
-        @apply flex flex-row lg:px-14 gap-2 lg:gap-24 pt-20 w-full;
+        @apply flex flex-row lg:px-14 gap-8 sm:gap-2 lg:gap-24 pt-20 w-full;
 
         .GithubIssues-shape {
             @apply flex flex-col items-center relative;
             .line-shape-2 {
-                @apply w-[3px] h-[420px] lg:h-[52rem];
+                @apply w-[3px] h-[680px] sm:h-[420px] lg:h-[52rem];
                 background: linear-gradient(transparent, #f778ba, #f778ba, transparent);
             }
             .line-shape-3 {
@@ -36,14 +36,14 @@
             }
         }
         .GithubIssues-description {
-            @apply text-[#848d97] text-2xl w-[48%] font-sans-md;
+            @apply text-[#848d97] pt-32 sm:pt-0 text-[1.4rem] sm:text-2xl w-full sm:w-[48%] font-sans sm:font-sans-md;
             span {
                 @apply text-white;
             }
         }
 
         a {
-            @apply text-white py-2 text-2xl w-fit font-sans-md flex flex-row gap-3 items-center;
+            @apply text-white py-2 text-xl sm:text-2xl w-fit font-sans-md flex flex-row gap-3 items-center;
             background-image: linear-gradient(to left, white, white);
             background-size: 0% 7%;
             background-position: bottom left;
@@ -54,15 +54,15 @@
             }
         }
         .Increase {
-            @apply flex flex-col gap-4 mt-40 relative;
+            @apply flex flex-col gap-4 mt-20 sm:mt-40 relative;
             p:nth-of-type(1) {
                 @apply font-sans w-fit text-xs text-[#f778ba] px-2 py-1 border-[#f778ba] border-[1px] rounded-full;
             }
             p:nth-of-type(2) {
-                @apply text-white text-2xl w-[48%] font-sans-md;
+                @apply text-white text-xl sm:text-2xl w-full sm:w-[48%] font-sans-md;
             }
             h2 {
-                @apply font-sans-md text-[#f778ba] text-7xl;
+                @apply font-sans-md text-[#f778ba] text-5xl sm:text-7xl;
             }
             img {
                 @apply absolute right-0 translate-x-1/2;

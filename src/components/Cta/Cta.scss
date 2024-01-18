@@ -2,11 +2,11 @@
 
 .Cta {
     @include global.paddingInline();
-    @apply w-full h-fit overflow-visible py-12;
+    @apply w-full h-fit overflow-visible sm:py-12;
     background: linear-gradient(to bottom, transparent, #070d1f);
     background-position: 335% 0%;
     .Cta-main {
-        @apply flex flex-row mt-44 lg:mt-36 lg:px-14 gap-2 lg:gap-12;
+        @apply flex flex-row  lg:px-14 gap-2 lg:gap-12;
         .Cta-shape {
             @apply flex flex-col items-center;
             .line-shape-1 {
@@ -33,14 +33,13 @@
         }
 
         .Cta-content {
-            @apply w-3/4  flex flex-col items-start gap-4;
+            @apply w-full sm:w-3/4 mt-20 lg:mt-36  flex flex-col items-start gap-4;
             h1 {
-                @apply w-full font-sans-b  text-[60px] lg:text-[60px] leading-[65px] text-white;
+                @apply w-full font-sans-b text-[35px] sm:text-[60px] lg:text-[60px] leading-[40px] sm:leading-[65px] text-white;
             }
             p {
                 /* Font & Text */
-                @apply font-sans;
-                font-size: 20px;
+                @apply w-full sm:w-auto font-sans text-[16px] sm:text-[20px];
                 font-weight: 400;
                 letter-spacing: normal;
 

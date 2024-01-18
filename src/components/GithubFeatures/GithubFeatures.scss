@@ -7,11 +7,11 @@
         'left right';
 
     .box {
-        @apply border-[1px] border-gray-700 z-10 flex rounded-lg pl-14 min-w-full max-w-full  h-[67vh] bg-[#161b22] relative;
+        @apply border-[1px] border-gray-700 z-10 pt-8 sm:pt-0 flex rounded-lg pl-6 sm:pl-14 min-w-full max-w-full  h-[67vh] bg-[#161b22] relative;
         .box-content {
             @apply h-full flex flex-col justify-around;
             p {
-                @apply text-[#848d97] text-[1.4rem] min-w-[65%] max-w-[65%] font-sans-md;
+                @apply text-[#848d97] text-[1.4rem] w-full sm:min-w-[65%] sm:max-w-[65%] font-sans-md;
                 span {
                     @apply text-white;
                 }
@@ -35,14 +35,17 @@
         }
     }
     .box-1 {
-        @apply flex-col lg:flex-row;
+        @apply flex-col lg:flex-row gap-8;
         grid-area: top;
+        img {
+            @apply w-[50%];
+        }
     }
     .box-2 {
-        @apply flex-col min-h-screen max-h-screen;
+        @apply flex-col h-fit sm:min-h-screen sm:max-h-screen gap-8;
         grid-area: left;
         .box-content {
-            @apply pt-14 justify-start gap-4;
+            @apply sm:pt-14 justify-start gap-4;
             p {
                 @apply w-3/4;
             }
@@ -52,10 +55,10 @@
         }
     }
     .box-3 {
-        @apply flex-col min-h-screen max-h-screen;
+        @apply flex-col h-fit sm:min-h-screen sm:max-h-screen  gap-8;
         grid-area: right;
         .box-content {
-            @apply pt-14 justify-start gap-4;
+            @apply sm:pt-14 justify-start gap-4;
             p {
                 @apply w-3/4;
             }

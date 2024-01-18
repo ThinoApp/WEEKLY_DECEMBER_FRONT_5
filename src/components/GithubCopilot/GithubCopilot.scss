@@ -2,30 +2,30 @@
 
 .GithubCopilot {
     @include global.paddingInline();
-    @apply z-10 flex flex-col overflow-hidden;
+    @apply z-10 flex flex-col overflow-visible;
     .Copilot-illustration {
-        @apply relative px-4;
+        @apply relative px-4 overflow-visible;
         img {
             @apply rounded-lg z-30;
             &:nth-of-type(1) {
                 @apply border-[1px] border-gray-700;
             }
             &:nth-of-type(2) {
-                @apply absolute right-16  top-[40%] w-[37%];
+                @apply absolute right-8 sm:right-16 h-[120%] sm:h-auto top-1/2 -translate-y-1/2 sm:top-[40%] w-[50%] sm:w-[37%];
             }
         }
         .glossing-blur {
-            @apply -z-10 absolute w-[25rem] h-[25rem] rounded-full bg-[#7d76e6]  right-32  -bottom-1/3;
+            @apply -z-10 hidden sm:block absolute w-[25rem] h-[25rem] rounded-full bg-[#7d76e6]  right-32  -bottom-1/3;
             filter: blur(142px);
         }
     }
     .GithubCopilot-content {
-        @apply flex flex-row lg:px-14 gap-2 lg:gap-24 pt-20 w-full;
+        @apply flex flex-row lg:px-14 gap-4 lg:gap-24 pt-20 w-full;
 
         .GithubCopilot-shape {
             @apply flex flex-col items-center relative;
             .line-shape-2 {
-                @apply w-[3px] h-[420px] lg:h-[52rem];
+                @apply w-[3px] h-[620px] lg:h-[52rem];
                 background: linear-gradient(transparent, rgb(63, 185, 80), rgb(63, 185, 80), transparent);
             }
             .line-shape-3 {
@@ -36,14 +36,14 @@
             }
         }
         .GithubCopilot-description {
-            @apply text-[#848d97] text-2xl w-[48%] font-sans-md;
+            @apply text-[#848d97] text-xl sm:text-2xl w-full sm:w-[48%] font-sans-md;
             span {
                 @apply text-white;
             }
         }
 
         a {
-            @apply text-white py-2 text-2xl w-fit font-sans-md flex flex-row gap-3 items-center;
+            @apply text-white py-2 text-lg sm:text-2xl w-fit font-sans-md flex flex-row gap-3 items-center;
             background-image: linear-gradient(to left, white, white);
             background-size: 0% 7%;
             background-position: bottom left;
@@ -54,15 +54,15 @@
             }
         }
         .Increase {
-            @apply flex flex-col gap-4 mt-40 relative;
+            @apply flex flex-col gap-4 mt-20 sm:mt-40 relative;
             p:nth-of-type(1) {
                 @apply font-sans w-fit text-xs text-[#3fb950] px-2 py-1 border-[#3fb950] border-[1px] rounded-full;
             }
             p:nth-of-type(2) {
-                @apply text-white text-2xl w-[48%] font-sans-md;
+                @apply text-white text-2xl w-full sm:w-[48%] font-sans-md;
             }
             h2 {
-                @apply font-sans-md text-[#3fb950] text-7xl;
+                @apply font-sans-md text-[#3fb950] text-5xl sm:text-7xl;
             }
             img {
                 @apply absolute right-0 translate-x-1/2;

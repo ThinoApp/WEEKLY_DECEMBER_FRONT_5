@@ -1,10 +1,23 @@
 import config from '@/utils/config';
 import './Productivity.scss';
 import { GoBriefcase } from 'react-icons/go';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import useMenuStore from '@/store/menuStore';
 const Productivity = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+    const { setActiveMenu } = useMenuStore();
+    useEffect(() => {
+        setActiveMenu({
+            id: 0,
+            value: 'Productivity',
+        });
+        console.log('IS IN VIEW SECURITY');
+    }, [isInView]);
+
     return (
-        <div className="Productivity">
+        <div className="Productivity" id="Productivity" ref={ref}>
             <div className="Productivity-main">
                 <div className="Productivity-shape">
                     <motion.div

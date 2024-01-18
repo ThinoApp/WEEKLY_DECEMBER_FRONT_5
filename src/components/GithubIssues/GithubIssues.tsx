@@ -20,8 +20,7 @@ const GithubIssues = () => {
                     <motion.div
                         initial={{ opacity: 0, scaleY: 0 }}
                         whileInView={{ opacity: 1, scaleY: 1 }}
-                        transition={{ delay: 0.5, dutaion: 0.5 }}
-                        viewport={{ amount: 0.2 }}
+                        transition={{ delay: 0.5, duration: 0.5 }}
                         className="line-shape-2 origin-top"
                     ></motion.div>
                     <div className="line-shape-3 hidden lg:flex">
@@ -54,7 +53,7 @@ const GithubIssues = () => {
                         <p>Did you know ?</p>
                         <h2>80%</h2>
                         <p>
-                            reduction in onboarding <br />
+                            reduction in onboarding <br className="hidden sm:block" />
                             time with GitHub2
                         </p>
                         <img src={`${config.image_base}/assets/images/shape-copilot.svg`} />

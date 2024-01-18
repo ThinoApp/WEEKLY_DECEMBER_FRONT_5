@@ -94,11 +94,13 @@
 
     .MenuMobile {
         @apply order-3  flex lg:hidden;
+        z-index: 20000;
+
         button {
             @apply text-3xl text-white;
         }
-        ul {
-            @apply w-[90vw] h-[90vh]  bg-white fixed bottom-0 right-0 flex flex-col gap-8 px-5 py-6 rounded-tl-md duration-300;
+        & > ul {
+            @apply w-[90vw] h-[90vh] overflow-y-scroll  bg-white fixed bottom-0 right-0 flex flex-col gap-8 px-5 py-6 rounded-tl-md duration-300;
             &.hide {
                 @apply translate-x-full opacity-0;
             }
@@ -109,12 +111,90 @@
                 @apply text-[#1b1f23] font-sans;
                 /* Font & Text */
                 font-size: 20px;
-                font-weight: 400;
+                font-weight: 600;
                 line-height: 20px;
                 text-align: left;
-                &:hover {
-                    color: #888888;
+
+                .content {
+                    @apply bg-white px-2 py-7 rounded-lg flex flex-col gap-8 duration-300;
+                    &.solution {
+                        @apply w-full flex-col gap-4;
+                        .product-content-left {
+                            @apply gap-4;
+                        }
+                    }
+                    &.show {
+                        @apply flex;
+                        @apply translate-y-0 opacity-100;
+                        pointer-events: all;
+                    }
+                    &.hide {
+                        @apply hidden;
+                        // @apply -translate-y-4 opacity-0;
+                        // pointer-events: none;;;
+                    }
+                    .product-content-left {
+                        @apply flex flex-col items-start gap-5;
+                        flex: 1;
+                        .github-menu-icon {
+                            @apply text-gray-500 text-2xl;
+                        }
+                        li {
+                            @apply flex items-center gap-4;
+                            &:hover {
+                                h4,
+                                p,
+                                .github-menu-icon {
+                                    color: rgb(9, 105, 218);
+                                }
+                            }
+                        }
+                        h4 {
+                            @apply text-black;
+                            font-family: Inter;
+                            font-weight: 500;
+                            font-size: 15px;
+                            line-height: 20px;
+                        }
+                        p {
+                            @apply text-gray-500;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .product-content-right {
+                        @apply flex-1 flex flex-col items-start gap-4;
+                        li {
+                            @apply text-gray-500  flex items-center gap-2;
+                            font-family: Inter;
+                            font-size: 14px;
+                            &:hover {
+                                span {
+                                    @apply opacity-100 scale-x-100;
+                                }
+                            }
+                            span {
+                                @apply duration-300 origin-left scale-x-0;
+                                opacity: 0;
+                            }
+                            p:hover {
+                                color: rgb(9, 105, 218);
+                            }
+                            &:nth-child(1) {
+                                @apply text-black;
+                                font-weight: 600;
+                                &:hover {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
                 }
+            }
+
+            .btn-sign-in {
+                @apply text-white bg-black text-lg px-4 py-2 rounded-lg;
+                @apply lg:border-none;
             }
         }
     }

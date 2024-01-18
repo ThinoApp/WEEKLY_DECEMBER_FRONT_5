@@ -21,7 +21,9 @@ const Cta = () => {
                     </div>
                 </div>
                 <div className="Cta-content">
-                    <h1>Over 100 million developers call GitHub home3</h1>
+                    <h1>
+                        <b>Over 100 million developers call GitHub home3</b>
+                    </h1>
                     <p>
                         Whether you’re scaling your startup or just learning how to code, GitHub is your home. Join the
                         world’s largest developer platform to build the innovations that empower humanity. Let’s build

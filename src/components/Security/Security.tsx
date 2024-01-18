@@ -1,10 +1,22 @@
 import { GoLock } from 'react-icons/go';
 import './Security.scss';
 import config from '@/utils/config';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import useMenuStore from '@/store/menuStore';
 const Security = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+    const { setActiveMenu } = useMenuStore();
+    useEffect(() => {
+        setActiveMenu({
+            id: 1,
+            value: 'Security',
+        });
+        console.log('IS IN VIEW SECURITY');
+    }, [isInView]);
     return (
-        <div className="Security">
+        <div className="Security" id="Security" ref={ref}>
             <div className="Security-shape">
                 <motion.div
                     initial={{ opacity: 0, scaleY: 0 }}
